@@ -30,6 +30,8 @@ The Chilean Peso lost nearly **38% of its purchasing power** over 11 years, whil
 
 The pipeline follows a classic ETL pattern (Extract → Transform → Load), orchestrated by a central script and scheduled to run automatically.
 
+```
+
 BCCh API ──►   extract.py  ──►  transform.py  ──►    load.py    ──►  PostgreSQL  ──►  Power BI
 (REST)       (requests)         (pandas)       (SQLAlchemy)     (local DB)       (dashboard)
 │                 │                │
@@ -38,6 +40,7 @@ BCCh API ──►   extract.py  ──►  transform.py  ──►    load.py  
 │
 Windows Task Scheduler
 (monthly run)
+```
 
 - **Extract** — requests the CPI and UF series from the Central Bank's REST API and returns them as DataFrames.
 - **Transform** — aligns both series to a monthly frequency, calculates the index base 100, and computes the Year-over-Year (YoY) inflation variation.
