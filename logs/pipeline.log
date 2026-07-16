@@ -1,0 +1,54 @@
+2026-07-04 22:42:06,535 - INFO - === Pipeline iniciado ===
+2026-07-04 22:42:08,079 - INFO - Extraccion de IPC completada: 132 filas
+2026-07-04 22:42:09,588 - INFO - Extraccion de UF completada: 4018 filas
+2026-07-04 22:42:09,599 - INFO - Transformacion completada: (132, 5)
+2026-07-04 22:42:09,731 - ERROR - Pipeline abortado por un error: (psycopg2.ProgrammingError) can't adapt type 'Period'
+[SQL: 
+        INSERT INTO inflacion_mensual (mes, ipc_valor, uf_valor, indice_ipc, indice_uf)
+        VALUES (%(mes)s, %(ipc_valor)s, %(uf_valor)s, %(indice_ipc)s, %(indice_uf)s)
+        ON CONFLICT (mes)
+        DO UPDATE SET
+            ipc_valor = EXCLUDED.ipc_valor,
+            uf_valor = EXCLUDED.uf_valor,
+            indice_ipc = EXCLUDED.indice_ipc,
+            indice_uf = EXCLUDED.indice_uf,
+            fecha_actualizacion = NOW()      
+]
+[parameters: [{'mes': Period('2015-01', 'M'), 'ipc_valor': 68.13588542, 'uf_valor': 24557.15, 'indice_ipc': 100.0, 'indice_uf': 100.0}, {'mes': Period('2015-02', 'M'), 'ipc_valor': 68.37555973, 'uf_valor': 24545.23, 'indice_ipc': 100.35175929471323, 'indice_uf': 99.95146016536934}, {'mes': Period('2015-03', 'M'), 'ipc_valor': 68.80550449, 'uf_valor': 24622.78, 'indice_ipc': 100.98277004235341, 'indice_uf': 100.267254139833}, {'mes': Period('2015-04', 'M'), 'ipc_valor': 69.20102898, 'uf_valor': 24754.77, 'indice_ipc': 101.56326369494475, 'indice_uf': 100.80473507715675}, {'mes': Period('2015-05', 'M'), 'ipc_valor': 69.3232892, 'uf_valor': 24904.75, 'indice_ipc': 101.7426995667271, 'indice_uf': 101.41547370114203}, {'mes': Period('2015-06', 'M'), 'ipc_valor': 69.65915007, 'uf_valor': 24982.96, 'indice_ipc': 102.23562758539111, 'indice_uf': 101.73395528389896}, {'mes': Period('2015-07', 'M'), 'ipc_valor': 69.95364643, 'uf_valor': 25086.58, 'indice_ipc': 102.66784675768878, 'indice_uf': 102.15590978594828}, {'mes': Period('2015-08', 'M'), 'ipc_valor': 70.42628433, 'uf_valor': 25194.21, 'indice_ipc': 103.36151632268611, 'indice_uf': 102.59419354444633}  ... displaying 10 of 132 total bound parameter sets ...  {'mes': Period('2025-11', 'M'), 'ipc_valor': 109.4734766, 'uf_valor': 39643.59, 'indice_ipc': 160.66933881491195, 'indice_uf': 161.43400190983073}, {'mes': Period('2025-12', 'M'), 'ipc_valor': 109.2630292, 'uf_valor': 39727.96, 'indice_ipc': 160.36047455241246, 'indice_uf': 161.77756783665856}]]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-07-04 22:43:13,148 - INFO - === Pipeline iniciado ===
+2026-07-04 22:43:13,760 - INFO - Extraccion de IPC completada: 132 filas
+2026-07-04 22:43:14,439 - INFO - Extraccion de UF completada: 4018 filas
+2026-07-04 22:43:14,458 - INFO - Transformacion completada: (132, 5)
+2026-07-04 22:43:14,639 - ERROR - Pipeline abortado por un error: (psycopg2.ProgrammingError) can't adapt type 'Period'
+[SQL: 
+        INSERT INTO inflacion_mensual (mes, ipc_valor, uf_valor, indice_ipc, indice_uf)
+        VALUES (%(mes)s, %(ipc_valor)s, %(uf_valor)s, %(indice_ipc)s, %(indice_uf)s)
+        ON CONFLICT (mes)
+        DO UPDATE SET
+            ipc_valor = EXCLUDED.ipc_valor,
+            uf_valor = EXCLUDED.uf_valor,
+            indice_ipc = EXCLUDED.indice_ipc,
+            indice_uf = EXCLUDED.indice_uf,
+            fecha_actualizacion = NOW()      
+]
+[parameters: [{'mes': Period('2015-01', 'M'), 'ipc_valor': 68.13588542, 'uf_valor': 24557.15, 'indice_ipc': 100.0, 'indice_uf': 100.0}, {'mes': Period('2015-02', 'M'), 'ipc_valor': 68.37555973, 'uf_valor': 24545.23, 'indice_ipc': 100.35175929471323, 'indice_uf': 99.95146016536934}, {'mes': Period('2015-03', 'M'), 'ipc_valor': 68.80550449, 'uf_valor': 24622.78, 'indice_ipc': 100.98277004235341, 'indice_uf': 100.267254139833}, {'mes': Period('2015-04', 'M'), 'ipc_valor': 69.20102898, 'uf_valor': 24754.77, 'indice_ipc': 101.56326369494475, 'indice_uf': 100.80473507715675}, {'mes': Period('2015-05', 'M'), 'ipc_valor': 69.3232892, 'uf_valor': 24904.75, 'indice_ipc': 101.7426995667271, 'indice_uf': 101.41547370114203}, {'mes': Period('2015-06', 'M'), 'ipc_valor': 69.65915007, 'uf_valor': 24982.96, 'indice_ipc': 102.23562758539111, 'indice_uf': 101.73395528389896}, {'mes': Period('2015-07', 'M'), 'ipc_valor': 69.95364643, 'uf_valor': 25086.58, 'indice_ipc': 102.66784675768878, 'indice_uf': 102.15590978594828}, {'mes': Period('2015-08', 'M'), 'ipc_valor': 70.42628433, 'uf_valor': 25194.21, 'indice_ipc': 103.36151632268611, 'indice_uf': 102.59419354444633}  ... displaying 10 of 132 total bound parameter sets ...  {'mes': Period('2025-11', 'M'), 'ipc_valor': 109.4734766, 'uf_valor': 39643.59, 'indice_ipc': 160.66933881491195, 'indice_uf': 161.43400190983073}, {'mes': Period('2025-12', 'M'), 'ipc_valor': 109.2630292, 'uf_valor': 39727.96, 'indice_ipc': 160.36047455241246, 'indice_uf': 161.77756783665856}]]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-07-04 22:46:26,723 - INFO - === Pipeline iniciado ===
+2026-07-04 22:46:28,387 - INFO - Extraccion de IPC completada: 132 filas
+2026-07-04 22:46:30,006 - INFO - Extraccion de UF completada: 4018 filas
+2026-07-04 22:46:30,022 - INFO - Transformacion completada: (132, 5)
+2026-07-04 22:46:30,291 - INFO - Carga completada: 132 registros en inflacion_mensual
+2026-07-04 22:46:30,291 - INFO - === Pipeline finalizado con exito ===
+2026-07-05 02:53:11,158 - INFO - === Pipeline iniciado ===
+2026-07-05 02:53:12,635 - INFO - Extraccion de IPC completada: 132 filas
+2026-07-05 02:53:14,122 - INFO - Extraccion de UF completada: 4018 filas
+2026-07-05 02:53:14,134 - INFO - Transformacion completada: (132, 5)
+2026-07-05 02:53:14,331 - INFO - Carga completada: 132 registros en inflacion_mensual
+2026-07-05 02:53:14,331 - INFO - === Pipeline finalizado con exito ===
+2026-07-05 03:32:43,113 - INFO - === Pipeline iniciado ===
+2026-07-05 03:32:44,927 - INFO - Extraccion de IPC completada: 132 filas
+2026-07-05 03:32:46,391 - INFO - Extraccion de UF completada: 4018 filas
+2026-07-05 03:32:46,405 - INFO - Transformacion completada: (132, 6)
+2026-07-05 03:32:46,546 - INFO - Carga completada: 132 registros en inflacion_mensual
+2026-07-05 03:32:46,546 - INFO - === Pipeline finalizado con exito ===

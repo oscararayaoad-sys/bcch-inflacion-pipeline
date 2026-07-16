@@ -1,0 +1,13 @@
+# Ignorar todos los archivos de datos pesados
+*.csv
+*.xlsx
+*.xls
+*.zip
+*.tar.gz
+
+# Ignorar archivos temporales y copias de seguridad de Power BI
+*.tmp
+*.[lL]ock
+
+data/
+*.csv
